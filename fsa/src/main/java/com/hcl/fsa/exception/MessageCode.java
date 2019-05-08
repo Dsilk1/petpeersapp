@@ -29,7 +29,8 @@ public class MessageCode {
 
 	public static MessageCode RECORD_NOT_FOUND = new MessageCode(101, "Record not found");
 	public static MessageCode INSUFFICENT_FUNDS = new MessageCode(102, "Insufficent Funds");
-	public static MessageCode USER_RECORD_NOT_FOUND = new MessageCode(106, "Customer not found");
-	public static MessageCode TRANSACTION_NOT_FOUND = new MessageCode(101, "Transaction not found");
-	public static MessageCode CUSTOMER_LOCKED = new MessageCode(101, "CustomerLocked");
+	public static MessageCode USER_RECORD_NOT_FOUND = new MessageCode(103, "Customer not found");
+	public static MessageCode TRANSACTION_NOT_FOUND = new MessageCode(104, "Transaction not found");
+	public static MessageCode CUSTOMER_LOCKED = new MessageCode(105, "CustomerLocked");
+	public static MessageCode Invalid_Month = new MessageCode(106, "Month valid from 1 to 12");
 }

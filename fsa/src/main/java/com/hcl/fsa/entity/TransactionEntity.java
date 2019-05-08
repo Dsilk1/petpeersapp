@@ -23,6 +23,8 @@ public class TransactionEntity implements IEntity{
 	private String desription;
 	@Column(name = "AMOUNT")
 	private Double amount;
+	@Column(name = "CURRENTBALANCE")
+	private Double currentbalance;
 	@Column(name = "PAYMENTTYPE")
 	private String paymentType;
 	@Column(name = "TRANSACTION_DATE")
@@ -30,7 +32,7 @@ public class TransactionEntity implements IEntity{
 	public TransactionEntity() {
 		// TODO Auto-generated constructor stub
 	}
-	public TransactionEntity(Long transactionId, Long customerId, String desription, Double amount, String paymentType,
+	public TransactionEntity(Long transactionId, Long customerId, String desription, Double amount, Double currentbalance,String paymentType,
 			Date date) {
 		super();
 		this.transactionId = transactionId;
@@ -39,6 +41,7 @@ public class TransactionEntity implements IEntity{
 		this.amount = amount;
 		this.paymentType = paymentType;
 		this.date = date;
+		this.currentbalance=currentbalance;
 	}
 	public Long getTransactionId() {
 		return transactionId;
@@ -75,6 +78,12 @@ public class TransactionEntity implements IEntity{
 	}
 	public void setDate(Date date) {
 		this.date = date;
+	}
+	public Double getCurrentbalance() {
+		return currentbalance;
+	}
+	public void setCurrentbalance(Double currentbalance) {
+		this.currentbalance = currentbalance;
 	}
 	
 	

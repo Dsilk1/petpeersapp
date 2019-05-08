@@ -11,13 +11,13 @@ public class TransactionConvertor implements IConverter<Transaction, Transaction
 	@Override
 	public TransactionEntity convert(Transaction d) {
 		// TODO Auto-generated method stub
-		return new TransactionEntity(d.getTransactionId(), d.getCustomerId(), d.getDesription(), d.getAmount(), d.getPaymentType(), d.getDate());
+		return new TransactionEntity(d.getTransactionId(), d.getCustomerId(), d.getDesription(), d.getAmount(),d.getCurrentBalance(), d.getPaymentType(), d.getDate());
 	}
 
 	@Override
 	public Transaction convert(TransactionEntity d) {
 		// TODO Auto-generated method stub
-		return new Transaction(d.getTransactionId(), d.getCustomerId(), d.getDesription(), d.getAmount(), d.getPaymentType(), d.getDate());
+		return new Transaction(d.getTransactionId(), d.getCustomerId(), d.getDesription(), d.getAmount(),d.getCurrentbalance(), d.getPaymentType(), d.getDate());
 	}
 
 	

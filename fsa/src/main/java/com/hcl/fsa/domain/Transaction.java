@@ -7,13 +7,14 @@ public class Transaction implements IDomain {
 	private Long customerId;
 	private String desription;
 	private Double amount;
+	private Double currentBalance;
 	private String paymentType;
 	private Date date;
 
 	public Transaction() {
 	}
 
-	public Transaction(Long transactionId, Long customerId, String desription, Double amount, String paymentType,
+	public Transaction(Long transactionId, Long customerId, String desription, Double amount,Double currentBalance, String paymentType,
 			Date date) {
 		super();
 		this.transactionId = transactionId;
@@ -22,6 +23,7 @@ public class Transaction implements IDomain {
 		this.amount = amount;
 		this.paymentType = paymentType;
 		this.date = date;
+		this.currentBalance=currentBalance;
 	}
 
 	public Long getTransactionId() {
@@ -70,6 +72,14 @@ public class Transaction implements IDomain {
 
 	public void setDate(Date date) {
 		this.date = date;
+	}
+
+	public Double getCurrentBalance() {
+		return currentBalance;
+	}
+
+	public void setCurrentBalance(Double currentBalance) {
+		this.currentBalance = currentBalance;
 	}
 
 }
