@@ -97,7 +97,7 @@ public class TransactionServiceImpl implements TransactionService {
 	@Override
 	public MonthlyResponseDto getMonthlyReport(Long cid, Date date) {
 		verifyCustomer(cid);
-		List<Transaction> monthlyTransactions = transactionRepo.findAll().stream().filter(x ->  x.getCustomerId()== cid)
+		List<Transaction> monthlyTransactions = transactionRepo.findAll().stream().filter(x ->  x.getCustomerId().equals(cid))
 				.filter(x -> date.getMonth() == x.getDate().getMonth()).map(x -> transactionConverter.convert(x))
 				.collect(Collectors.toList());
 		if (monthlyTransactions.size() == 0)
